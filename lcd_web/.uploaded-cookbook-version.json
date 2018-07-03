@@ -1,0 +1,188 @@
+{
+  "all_files": [
+    {
+      "name": "test/default_test.rb",
+      "path": "test/integration/default/default_test.rb",
+      "checksum": "5d67776adb643015bf3f9646028fc76c",
+      "specificity": "default"
+    },
+    {
+      "name": "test/users_test.rb",
+      "path": "test/integration/default/users_test.rb",
+      "checksum": "955b62179a3abb3841956f9c249b39cb",
+      "specificity": "default"
+    },
+    {
+      "name": "test/default_test.rb",
+      "path": "test/smoke/default/default_test.rb",
+      "checksum": "812ddcebced2669965715f7220814610",
+      "specificity": "default"
+    },
+    {
+      "name": "test/spec_users.rb",
+      "path": "test/smoke/default/spec_users.rb",
+      "checksum": "5e8ccb85385993861aaacbccd06e3be8",
+      "specificity": "default"
+    },
+    {
+      "name": "libraries/kitchen.log",
+      "path": "libraries/.kitchen/logs/kitchen.log",
+      "checksum": "3caa35ed509c5949445175cc117af7d3",
+      "specificity": "default"
+    },
+    {
+      "name": "libraries/default.rb",
+      "path": "libraries/default.rb",
+      "checksum": "19bd1f09bd3f31c7b7cfa6470ae95bee",
+      "specificity": "default"
+    },
+    {
+      "name": "libraries/helpers.rb",
+      "path": "libraries/helpers.rb",
+      "checksum": "48092e50bff02b77aec230caff76b360",
+      "specificity": "default"
+    },
+    {
+      "name": "CHANGELOG.md",
+      "path": "CHANGELOG.md",
+      "checksum": "625cc54cecf56e1829affb93a36e2e13",
+      "specificity": "default"
+    },
+    {
+      "name": "chefignore",
+      "path": "chefignore",
+      "checksum": "8218f5e138ec098a9ec618082f05a9b8",
+      "specificity": "default"
+    },
+    {
+      "name": "Berksfile.lock",
+      "path": "Berksfile.lock",
+      "checksum": "4205f3182f0f3eec7128bd0c530e6515",
+      "specificity": "default"
+    },
+    {
+      "name": "templates/index.html.erb",
+      "path": "templates/index.html.erb",
+      "checksum": "d14c3a1d3312a6f8521a32743e3bc0d8",
+      "specificity": "root_default"
+    },
+    {
+      "name": "metadata.rb",
+      "path": "metadata.rb",
+      "checksum": "f52f4c2e7a1c39e5119d874bef8867c4",
+      "specificity": "default"
+    },
+    {
+      "name": "spec/spec_helper.rb",
+      "path": "spec/spec_helper.rb",
+      "checksum": "d9c82d41d0883b334b0d7c0ce89071e8",
+      "specificity": "default"
+    },
+    {
+      "name": "spec/default_spec.rb",
+      "path": "spec/unit/recipes/default_spec.rb",
+      "checksum": "d19928a7fe56ef5a60c5abfcaab477e1",
+      "specificity": "default"
+    },
+    {
+      "name": "spec/users_spec.rb",
+      "path": "spec/unit/recipes/users_spec.rb",
+      "checksum": "82edfa2b6f9c6e621bb3b371be27f404",
+      "specificity": "default"
+    },
+    {
+      "name": "README.md",
+      "path": "README.md",
+      "checksum": "40141aa4a7dd45ab3af63b8c3adcb9c1",
+      "specificity": "default"
+    },
+    {
+      "name": "resources/hello.rb",
+      "path": "resources/hello.rb",
+      "checksum": "57b03f304ca7e8cc01ba3bc98d170e02",
+      "specificity": "default"
+    },
+    {
+      "name": "recipes/default.rb",
+      "path": "recipes/default.rb",
+      "checksum": "f345f14a6ce291d5d7dc65b65eaabe43",
+      "specificity": "default"
+    },
+    {
+      "name": "recipes/users.rb",
+      "path": "recipes/users.rb",
+      "checksum": "e9d074cbcb444ea44558f455ecf32a6c",
+      "specificity": "default"
+    },
+    {
+      "name": "attributes/default.rb",
+      "path": "attributes/default.rb",
+      "checksum": "a81ff64a9ad83bb12fb578efed964ab6",
+      "specificity": "default"
+    },
+    {
+      "name": "LICENSE",
+      "path": "LICENSE",
+      "checksum": "614c0aa8da869a10ac8f6748db3aeb1a",
+      "specificity": "default"
+    },
+    {
+      "name": "Berksfile",
+      "path": "Berksfile",
+      "checksum": "8c8bbef226c6ee425efaf94c201f4152",
+      "specificity": "default"
+    },
+    {
+      "name": ".kitchen.yml",
+      "path": ".kitchen.yml",
+      "checksum": "de7cec9ae5f5f53ed2e2b82db6dfa2dc",
+      "specificity": "default"
+    }
+  ],
+  "metadata": {
+    "name": "lcd_web",
+    "description": "Installs/Configures lcd_web",
+    "long_description": "Installs/Configures lcd_web",
+    "maintainer": "Robert Nicolais",
+    "maintainer_email": "bob@bob.com",
+    "license": "All Rights Reserved",
+    "platforms": {
+
+    },
+    "dependencies": {
+
+    },
+    "providing": {
+      "lcd_web": ">= 0.0.0",
+      "lcd_web::users": ">= 0.0.0"
+    },
+    "attributes": {
+
+    },
+    "recipes": {
+      "lcd_web": "",
+      "lcd_web::users": ""
+    },
+    "version": "0.1.0",
+    "source_url": "",
+    "issues_url": "",
+    "privacy": false,
+    "chef_versions": [
+      [
+        ">= 12.14"
+      ]
+    ],
+    "ohai_versions": [
+
+    ],
+    "gems": [
+
+    ]
+  },
+  "version": "0.1.0",
+  "name": "lcd_web-0.1.0",
+  "cookbook_name": "lcd_web",
+  "frozen?": false,
+  "chef_type": "cookbook_version",
+  "json_class": "Chef::CookbookVersion"
+}
