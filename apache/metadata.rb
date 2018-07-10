@@ -4,7 +4,7 @@ maintainer_email 'bob@bob.com'
 license 'All Rights Reserved'
 description 'Installs/Configures apache'
 long_description 'Installs/Configures apache'
-version '2.0'
+version '2.1.1'
 chef_version '>= 12.1' if respond_to?(:chef_version)
 
 # The `issues_url` points to the location where issues for this cookbook are

@@ -1,0 +1,150 @@
+W, [2018-07-09T11:34:21.758800 #16810]  WARN -- default-centos-72: Deprecated configuration detected:
+require_chef_omnibus
+Run 'kitchen doctor' for details.
+
+I, [2018-07-09T11:34:22.870192 #16810]  INFO -- default-centos-72: -----> Creating <default-centos-72>...
+I, [2018-07-09T11:34:22.927435 #16810]  INFO -- default-centos-72: Sending build context to Docker daemon  53.25kB
+I, [2018-07-09T11:34:22.939913 #16810]  INFO -- default-centos-72: Step 1/16 : FROM centos:centos7
+I, [2018-07-09T11:34:22.940396 #16810]  INFO -- default-centos-72:  ---> 49f7960eb7e4
+I, [2018-07-09T11:34:22.940797 #16810]  INFO -- default-centos-72: Step 2/16 : ENV container docker
+I, [2018-07-09T11:34:22.941077 #16810]  INFO -- default-centos-72:  ---> Using cache
+I, [2018-07-09T11:34:22.941234 #16810]  INFO -- default-centos-72:  ---> e01eb71ec441
+I, [2018-07-09T11:34:22.941428 #16810]  INFO -- default-centos-72: Step 3/16 : RUN yum clean all
+I, [2018-07-09T11:34:22.941782 #16810]  INFO -- default-centos-72:  ---> Using cache
+I, [2018-07-09T11:34:22.941986 #16810]  INFO -- default-centos-72:  ---> d5cab4a5fb83
+I, [2018-07-09T11:34:22.942182 #16810]  INFO -- default-centos-72: Step 4/16 : RUN yum install -y sudo openssh-server openssh-clients which curl
+I, [2018-07-09T11:34:22.942468 #16810]  INFO -- default-centos-72:  ---> Using cache
+I, [2018-07-09T11:34:22.942634 #16810]  INFO -- default-centos-72:  ---> d95f2ae04c8c
+I, [2018-07-09T11:34:22.942831 #16810]  INFO -- default-centos-72: Step 5/16 : RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ''
+I, [2018-07-09T11:34:22.943066 #16810]  INFO -- default-centos-72:  ---> Using cache
+I, [2018-07-09T11:34:22.943158 #16810]  INFO -- default-centos-72:  ---> 9efd8c456df9
+I, [2018-07-09T11:34:22.943349 #16810]  INFO -- default-centos-72: Step 6/16 : RUN ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key -N ''
+I, [2018-07-09T11:34:22.943798 #16810]  INFO -- default-centos-72:  ---> Using cache
+I, [2018-07-09T11:34:22.943950 #16810]  INFO -- default-centos-72:  ---> eb7c46958772
+I, [2018-07-09T11:34:22.944149 #16810]  INFO -- default-centos-72: Step 7/16 : RUN if ! getent passwd kitchen; then                 useradd -d /home/kitchen -m -s /bin/bash -p '*' kitchen;               fi
+I, [2018-07-09T11:34:22.944405 #16810]  INFO -- default-centos-72:  ---> Using cache
+I, [2018-07-09T11:34:22.944625 #16810]  INFO -- default-centos-72:  ---> 2d2651819762
+I, [2018-07-09T11:34:22.944824 #16810]  INFO -- default-centos-72: Step 8/16 : RUN echo "kitchen ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+I, [2018-07-09T11:34:22.945322 #16810]  INFO -- default-centos-72:  ---> Using cache
+I, [2018-07-09T11:34:22.945554 #16810]  INFO -- default-centos-72:  ---> 69d8a9d4cc68
+I, [2018-07-09T11:34:22.945795 #16810]  INFO -- default-centos-72: Step 9/16 : RUN echo "Defaults !requiretty" >> /etc/sudoers
+I, [2018-07-09T11:34:22.946159 #16810]  INFO -- default-centos-72:  ---> Using cache
+I, [2018-07-09T11:34:22.946388 #16810]  INFO -- default-centos-72:  ---> 8d07c01129dd
+I, [2018-07-09T11:34:22.946721 #16810]  INFO -- default-centos-72: Step 10/16 : RUN mkdir -p /home/kitchen/.ssh
+I, [2018-07-09T11:34:22.947077 #16810]  INFO -- default-centos-72:  ---> Using cache
+I, [2018-07-09T11:34:22.947323 #16810]  INFO -- default-centos-72:  ---> 5280823a5fa5
+I, [2018-07-09T11:34:22.947566 #16810]  INFO -- default-centos-72: Step 11/16 : RUN chown -R kitchen /home/kitchen/.ssh
+I, [2018-07-09T11:34:22.947954 #16810]  INFO -- default-centos-72:  ---> Using cache
+I, [2018-07-09T11:34:22.948140 #16810]  INFO -- default-centos-72:  ---> bb3fab8630d7
+I, [2018-07-09T11:34:22.948389 #16810]  INFO -- default-centos-72: Step 12/16 : RUN chmod 0700 /home/kitchen/.ssh
+I, [2018-07-09T11:34:22.948771 #16810]  INFO -- default-centos-72:  ---> Using cache
+I, [2018-07-09T11:34:22.948979 #16810]  INFO -- default-centos-72:  ---> 3144f817be6a
+I, [2018-07-09T11:34:22.949289 #16810]  INFO -- default-centos-72: Step 13/16 : RUN touch /home/kitchen/.ssh/authorized_keys
+I, [2018-07-09T11:34:22.949787 #16810]  INFO -- default-centos-72:  ---> Using cache
+I, [2018-07-09T11:34:22.950020 #16810]  INFO -- default-centos-72:  ---> 13631a56ade7
+I, [2018-07-09T11:34:22.950221 #16810]  INFO -- default-centos-72: Step 14/16 : RUN chown kitchen /home/kitchen/.ssh/authorized_keys
+I, [2018-07-09T11:34:22.950636 #16810]  INFO -- default-centos-72:  ---> Using cache
+I, [2018-07-09T11:34:22.950918 #16810]  INFO -- default-centos-72:  ---> e71bf03b47f5
+I, [2018-07-09T11:34:22.951181 #16810]  INFO -- default-centos-72: Step 15/16 : RUN chmod 0600 /home/kitchen/.ssh/authorized_keys
+I, [2018-07-09T11:34:22.951677 #16810]  INFO -- default-centos-72:  ---> Using cache
+I, [2018-07-09T11:34:22.951937 #16810]  INFO -- default-centos-72:  ---> e97c09ac145d
+I, [2018-07-09T11:34:22.952206 #16810]  INFO -- default-centos-72: Step 16/16 : RUN echo ssh-rsa\ AAAAB3NzaC1yc2EAAAADAQABAAABAQCztg9pOiDLw0odx3FvmxhZH9uFlncOSnsIHeXuaQScuVaeB8SshmXkxQooM3smc3MXGG6lo7P21mr4n91MBF6GMAuYSgu0h7u7fg3hGf/kyPVFqLs6cON2Lhpsp\+Q/2Ua8cIPc3Gk97hBxt9dILzqSOyREJKaa7tRuRoXEFl4YBtOgqSrUMajzM3qNy5jwbH61fGZMiEn9YwgdrxUTALg9ifHABtxtoeOWOPgxf2234ar1m9SgEAvV8nSBKAKKvS9\+pmx1zZHnly97OMIC2AXgzF2zYD24Bmwh75OsMT6DqZu4wb9WDa0boJIXo5CF6k\+MxlXR\+4ECWsIekgyg7axn\ kitchen_docker_key >> /home/kitchen/.ssh/authorized_keys
+I, [2018-07-09T11:34:22.952649 #16810]  INFO -- default-centos-72:  ---> Using cache
+I, [2018-07-09T11:34:22.952806 #16810]  INFO -- default-centos-72:  ---> 121e974df6b6
+I, [2018-07-09T11:34:22.955629 #16810]  INFO -- default-centos-72: Successfully built 121e974df6b6
+I, [2018-07-09T11:34:23.057263 #16810]  INFO -- default-centos-72: bf185f1a7fcb80fa9edfbb8844fbef679e1699bdd788fb717aa2b1c1c4a18574
+I, [2018-07-09T11:34:23.428221 #16810]  INFO -- default-centos-72: 0.0.0.0:32769
+I, [2018-07-09T11:34:23.452581 #16810]  INFO -- default-centos-72: Waiting for SSH service on localhost:32769, retrying in 3 seconds
+I, [2018-07-09T11:34:26.888122 #16810]  INFO -- default-centos-72: [SSH] Established
+I, [2018-07-09T11:34:26.889387 #16810]  INFO -- default-centos-72: Finished creating <default-centos-72> (0m4.02s).
+I, [2018-07-09T11:34:26.889578 #16810]  INFO -- default-centos-72: -----> Converging <default-centos-72>...
+I, [2018-07-09T11:34:26.890015 #16810]  INFO -- default-centos-72: Preparing files for transfer
+I, [2018-07-09T11:34:26.890190 #16810]  INFO -- default-centos-72: Preparing dna.json
+I, [2018-07-09T11:34:26.890418 #16810]  INFO -- default-centos-72: Resolving cookbook dependencies with Berkshelf 7.0.2...
+I, [2018-07-09T11:34:29.016119 #16810]  INFO -- default-centos-72: Removing non-cookbook files before transfer
+I, [2018-07-09T11:34:29.017040 #16810]  INFO -- default-centos-72: Preparing validation.pem
+I, [2018-07-09T11:34:29.017333 #16810]  INFO -- default-centos-72: Preparing client.rb
+I, [2018-07-09T11:34:29.418627 #16810]  INFO -- default-centos-72: -----> Installing Chef Omnibus (13.8.5)
+I, [2018-07-09T11:34:29.420785 #16810]  INFO -- default-centos-72: Downloading https://omnitruck.chef.io/install.sh to file /tmp/install.sh
+I, [2018-07-09T11:34:29.421487 #16810]  INFO -- default-centos-72: Trying curl...
+I, [2018-07-09T11:34:29.758557 #16810]  INFO -- default-centos-72: Download complete.
+I, [2018-07-09T11:34:29.791463 #16810]  INFO -- default-centos-72: el 7 x86_64
+I, [2018-07-09T11:34:29.792499 #16810]  INFO -- default-centos-72: Getting information for chef stable 13.8.5 for el...
+I, [2018-07-09T11:34:29.793257 #16810]  INFO -- default-centos-72: downloading https://omnitruck.chef.io/stable/chef/metadata?v=13.8.5&p=el&pv=7&m=x86_64
+I, [2018-07-09T11:34:29.793920 #16810]  INFO -- default-centos-72:   to file /tmp/install.sh.122/metadata.txt
+I, [2018-07-09T11:34:29.795238 #16810]  INFO -- default-centos-72: trying curl...
+I, [2018-07-09T11:34:30.486768 #16810]  INFO -- default-centos-72: sha1	f69e475eb3bcdeefe761462f05cbf7c7281270ae
+I, [2018-07-09T11:34:30.489267 #16810]  INFO -- default-centos-72: sha256	39227d13e5ca2ae023627ad63c56a073b7fecf1a68030915b11ce55e9692c214
+I, [2018-07-09T11:34:30.490288 #16810]  INFO -- default-centos-72: url	https://packages.chef.io/files/stable/chef/13.8.5/el/7/chef-13.8.5-1.el7.x86_64.rpm
+I, [2018-07-09T11:34:30.491447 #16810]  INFO -- default-centos-72: version	13.8.5
+I, [2018-07-09T11:34:30.493600 #16810]  INFO -- default-centos-72: downloaded metadata file looks valid...
+I, [2018-07-09T11:34:30.500625 #16810]  INFO -- default-centos-72: downloading https://packages.chef.io/files/stable/chef/13.8.5/el/7/chef-13.8.5-1.el7.x86_64.rpm
+I, [2018-07-09T11:34:30.501224 #16810]  INFO -- default-centos-72:   to file /tmp/install.sh.122/chef-13.8.5-1.el7.x86_64.rpm
+I, [2018-07-09T11:34:30.502297 #16810]  INFO -- default-centos-72: trying curl...
+I, [2018-07-09T11:34:32.093998 #16810]  INFO -- default-centos-72: Comparing checksum with sha256sum...
+I, [2018-07-09T11:34:32.222312 #16810]  INFO -- default-centos-72: Installing chef 13.8.5
+I, [2018-07-09T11:34:32.222803 #16810]  INFO -- default-centos-72: installing with rpm...
+I, [2018-07-09T11:34:32.247068 #16810]  INFO -- default-centos-72: warning: /tmp/install.sh.122/chef-13.8.5-1.el7.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+I, [2018-07-09T11:34:32.331067 #16810]  INFO -- default-centos-72: Preparing...                                                            (100%)#                                 (100%)##                                (100%)###                               (100%)####                              (100%)#####                             (100%)######                            (100%)#######                           (100%)########                          (100%)#########                         (100%)##########                        (100%)###########                       (100%)############                      (100%)#############                     (100%)##############                    (100%)###############                   (100%)################                  (100%)#################                 (100%)##################                (100%)###################               (100%)####################              (100%)#####################             (100%)######################            (100%)#######################           (100%)########################          (100%)#########################         (100%)##########################        (100%)###########################       (100%)############################      (100%)#############################     (100%)##############################    (100%)###############################   (100%)################################  (100%)################################# (100%)################################# [100%]
+I, [2018-07-09T11:34:32.343493 #16810]  INFO -- default-centos-72: Updating / installing...
+I, [2018-07-09T11:34:35.730280 #16810]  INFO -- default-centos-72:    1:chef-13.8.5-1.el7                                                  (  1%)#                                 (  4%)##                                (  7%)###                               ( 10%)####                              ( 13%)#####                             ( 16%)######                            ( 19%)#######                           ( 22%)########                          ( 25%)#########                         ( 28%)##########                        ( 31%)###########                       ( 34%)############                      ( 37%)#############                     ( 40%)##############                    ( 43%)###############                   ( 46%)################                  ( 49%)#################                 ( 51%)##################                ( 54%)###################               ( 57%)####################              ( 60%)#####################             ( 63%)######################            ( 66%)#######################           ( 69%)########################          ( 72%)#########################         ( 75%)##########################        ( 78%)###########################       ( 81%)############################      ( 84%)#############################     ( 87%)##############################    ( 90%)###############################   ( 93%)################################  ( 96%)################################# ( 99%)################################# [100%]
+I, [2018-07-09T11:34:37.782672 #16810]  INFO -- default-centos-72: Thank you for installing Chef!
+I, [2018-07-09T11:34:37.888511 #16810]  INFO -- default-centos-72: Transferring files to <default-centos-72>
+I, [2018-07-09T11:34:39.399187 #16810]  INFO -- default-centos-72: Starting Chef Client, version 13.8.5
+I, [2018-07-09T11:34:39.591479 #16810]  INFO -- default-centos-72: [2018-07-09T15:34:39+00:00] WARN: Plugin Network: unable to detect ipaddress
+I, [2018-07-09T11:34:40.197728 #16810]  INFO -- default-centos-72: Creating a new client identity for default-centos-72 using the validator key.
+I, [2018-07-09T11:34:40.220375 #16810]  INFO -- default-centos-72: resolving cookbooks for run list: ["lcd_web::default"]
+I, [2018-07-09T11:34:40.237540 #16810]  INFO -- default-centos-72: Synchronizing Cookbooks:
+I, [2018-07-09T11:34:40.247003 #16810]  INFO -- default-centos-72:   - lcd_web (0.8.0)
+I, [2018-07-09T11:34:40.247688 #16810]  INFO -- default-centos-72: Installing Cookbook Gems:
+I, [2018-07-09T11:34:40.249607 #16810]  INFO -- default-centos-72: Compiling Cookbooks...
+I, [2018-07-09T11:34:40.256599 #16810]  INFO -- default-centos-72: Converging 8 resources
+I, [2018-07-09T11:34:40.257327 #16810]  INFO -- default-centos-72: Recipe: lcd_web::users
+I, [2018-07-09T11:34:40.309351 #16810]  INFO -- default-centos-72:   * group[developers] action create
+I, [2018-07-09T11:34:40.310062 #16810]  INFO -- default-centos-72:     - create group developers
+I, [2018-07-09T11:34:40.343433 #16810]  INFO -- default-centos-72:   * linux_user[webadmin] action create
+I, [2018-07-09T11:34:40.344320 #16810]  INFO -- default-centos-72:     - create user webadmin
+I, [2018-07-09T11:34:40.344912 #16810]  INFO -- default-centos-72: Recipe: lcd_web::default
+I, [2018-07-09T11:34:47.586684 #16810]  INFO -- default-centos-72:   * yum_package[net-tools] action install
+I, [2018-07-09T11:34:47.587624 #16810]  INFO -- default-centos-72:     - install version 2.0-0.22.20131004git.el7 of package net-tools
+I, [2018-07-09T11:34:54.240398 #16810]  INFO -- default-centos-72:   * yum_package[httpd] action install
+I, [2018-07-09T11:34:54.241278 #16810]  INFO -- default-centos-72:     - install version 2.4.6-80.el7.centos.1 of package httpd
+I, [2018-07-09T11:34:54.356747 #16810]  INFO -- default-centos-72:   * service[httpd] action enable
+I, [2018-07-09T11:34:54.357961 #16810]  INFO -- default-centos-72:     - enable service service[httpd]
+I, [2018-07-09T11:34:54.473168 #16810]  INFO -- default-centos-72:   * service[httpd] action start
+I, [2018-07-09T11:34:54.474234 #16810]  INFO -- default-centos-72:     - start service service[httpd]
+I, [2018-07-09T11:34:54.477081 #16810]  INFO -- default-centos-72:   * template[/var/www/html/index.html] action create
+I, [2018-07-09T11:34:54.508160 #16810]  INFO -- default-centos-72:     - create new file /var/www/html/index.html
+I, [2018-07-09T11:34:54.508547 #16810]  INFO -- default-centos-72:     - update content in file /var/www/html/index.html from none to 15f312
+I, [2018-07-09T11:34:54.508833 #16810]  INFO -- default-centos-72:     --- /var/www/html/index.html	2018-07-09 15:34:54.474338118 +0000
+I, [2018-07-09T11:34:54.509160 #16810]  INFO -- default-centos-72:     +++ /var/www/html/.chef-index20180709-251-1sw6hbp.html	2018-07-09 15:34:54.474338118 +0000
+I, [2018-07-09T11:34:54.509358 #16810]  INFO -- default-centos-72:     @@ -1 +1,2 @@
+I, [2018-07-09T11:34:54.509490 #16810]  INFO -- default-centos-72:     +Hello World from bf185f1a7fcb
+I, [2018-07-09T11:34:54.509649 #16810]  INFO -- default-centos-72:     - change owner from '' to 'apache'
+I, [2018-07-09T11:34:54.509782 #16810]  INFO -- default-centos-72:     - change group from '' to 'apache'
+I, [2018-07-09T11:34:54.519228 #16810]  INFO -- default-centos-72:   * execute[systemctl start httpd] action run
+I, [2018-07-09T11:34:54.519262 #16810]  INFO -- default-centos-72:     - execute systemctl start httpd
+I, [2018-07-09T11:34:54.524076 #16810]  INFO -- default-centos-72:   * hello_httpd[greet world] action create
+I, [2018-07-09T11:34:54.640421 #16810]  INFO -- default-centos-72:     * yum_package[httpd] action install (up to date)
+I, [2018-07-09T11:34:54.716229 #16810]  INFO -- default-centos-72:     * service[httpd] action enable (up to date)
+I, [2018-07-09T11:34:54.808208 #16810]  INFO -- default-centos-72:     * service[httpd] action start (up to date)
+I, [2018-07-09T11:34:54.816688 #16810]  INFO -- default-centos-72:     * template[/var/www/html/index.html] action create (up to date)
+I, [2018-07-09T11:34:54.818026 #16810]  INFO -- default-centos-72:      (up to date)
+I, [2018-07-09T11:34:54.854818 #16810]  INFO -- default-centos-72: 
+I, [2018-07-09T11:34:54.855224 #16810]  INFO -- default-centos-72: Running handlers:
+I, [2018-07-09T11:34:54.855662 #16810]  INFO -- default-centos-72: Running handlers complete
+I, [2018-07-09T11:34:54.855909 #16810]  INFO -- default-centos-72: 
+I, [2018-07-09T11:34:54.856254 #16810]  INFO -- default-centos-72: Deprecated features used!
+I, [2018-07-09T11:34:54.856725 #16810]  INFO -- default-centos-72:   rename greeting to new_resource.greeting at 1 location:
+I, [2018-07-09T11:34:54.857123 #16810]  INFO -- default-centos-72:     - /tmp/kitchen/cache/cookbooks/lcd_web/resources/hello.rb:18:in `block (2 levels) in class_from_file'
+I, [2018-07-09T11:34:54.857617 #16810]  INFO -- default-centos-72:    See https://docs.chef.io/deprecations_namespace_collisions.html for further details.
+I, [2018-07-09T11:34:54.857966 #16810]  INFO -- default-centos-72: 
+I, [2018-07-09T11:34:54.858521 #16810]  INFO -- default-centos-72: Chef Client finished, 8/13 resources updated in 15 seconds
+I, [2018-07-09T11:34:54.874821 #16810]  INFO -- default-centos-72: Downloading files from <default-centos-72>
+I, [2018-07-09T11:34:54.875648 #16810]  INFO -- default-centos-72: Finished converging <default-centos-72> (0m27.99s).
+I, [2018-07-09T11:34:54.875805 #16810]  INFO -- default-centos-72: -----> Setting up <default-centos-72>...
+I, [2018-07-09T11:34:54.876163 #16810]  INFO -- default-centos-72: Finished setting up <default-centos-72> (0m0.00s).
+I, [2018-07-09T11:34:54.876250 #16810]  INFO -- default-centos-72: -----> Verifying <default-centos-72>...
+I, [2018-07-09T11:34:56.577330 #16810]  INFO -- default-centos-72: Loaded tests from {:path=>".home.drc.chef-repo.cookbooks.lcd_web.test.integration.default"} 
+I, [2018-07-09T11:34:56.577708 #16810]  INFO -- default-centos-72: Loaded tests from {:path=>".home.drc.chef-repo.cookbooks.lcd_web.test.smoke.default"} 
+I, [2018-07-09T11:34:58.419706 #16810]  INFO -- default-centos-72: Finished verifying <default-centos-72> (0m3.54s).
