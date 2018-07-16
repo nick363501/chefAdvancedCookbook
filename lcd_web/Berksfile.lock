@@ -1,7 +1,0 @@
-DEPENDENCIES
-  lcd_web
-    path: .
-    metadata: true
-
-GRAPH
-  lcd_web (0.8.0)
