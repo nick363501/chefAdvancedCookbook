@@ -4,7 +4,7 @@ maintainer_email 'you@example.com'
 license 'All Rights Reserved'
 description 'Installs/Configures drcclient'
 long_description 'Installs/Configures drcclient'
-version '1.2.0'
+version '1.3.0'
 chef_version '>= 12.14' if respond_to?(:chef_version)
 depends 'chef-client'
 
